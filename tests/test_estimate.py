@@ -15,12 +15,12 @@ def vision(h, c):
     return VisionResult(count_hough=h, count_contour=c, agreement=agreement, mean_diameter_px=50.0)
 
 
-@pytest.mark.parametrize("item", load_catalog(), ids=lambda i: i.sku)
-def test_matches_catalog_counts(item):
-    # The catalog was generated with the same allowances, so this checks consistency, not accuracy.
-    spec = Spec(product_type=item.product_type, bead_size_mm=item.bead_size_mm, length_cm=item.length_cm,
-                string_material=item.string_material, clasp_type=item.clasp_type)
-    assert from_spec(spec) == item.bead_count
+def test_allowances_still_match_the_catalog():
+    # The catalog was generated with these allowances, so this is a regression check, not an accuracy test.
+    mismatched = [item.sku for item in load_catalog() if from_spec(Spec(
+        product_type=item.product_type, bead_size_mm=item.bead_size_mm, length_cm=item.length_cm,
+        string_material=item.string_material, clasp_type=item.clasp_type)) != item.bead_count]
+    assert mismatched == []
 
 
 @pytest.mark.parametrize("fields, expected", [

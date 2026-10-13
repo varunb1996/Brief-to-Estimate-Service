@@ -56,6 +56,41 @@ def test_unit_strings_and_unknown_keys_are_repaired(llm):
     assert set(r.repaired_fields) == {"bead_size_mm", "length_cm", "bead_color"}
 
 
+def test_cm_value_mentioning_in_is_not_converted(llm):
+    replies, _ = llm
+    replies.append('{"product_type": "necklace", "length_cm": "45 cm in length"}')
+    assert extract.extract_spec("necklace, 45 cm", None).spec.length_cm == 45.0
+
+
+@pytest.mark.parametrize("provider, url, reply, text", [
+    ("openai", "https://api.example.test/v1/chat/completions",
+     {"choices": [{"message": {"content": "{}"}}], "usage": {"prompt_tokens": 7, "completion_tokens": 3}}, "{}"),
+    ("anthropic", "https://api.example.test/v1/messages",
+     {"content": [{"type": "thinking", "thinking": ""}, {"type": "text", "text": "{}"}],
+      "usage": {"input_tokens": 7, "output_tokens": 3}}, "{}"),
+])
+def test_call_request_and_response_shape(monkeypatch, provider, url, reply, text):
+    monkeypatch.setenv("LLM_PROVIDER", provider)
+    monkeypatch.setenv("LLM_BASE_URL", "https://api.example.test/v1")
+    monkeypatch.setenv("LLM_API_KEY", "test-key")
+    sent = {}
+
+    def fake_post(u, headers, json, timeout):
+        sent.update(url=u, headers=headers, body=json)
+        return httpx.Response(200, json=reply, request=httpx.Request("POST", u))
+
+    monkeypatch.setattr(extract.httpx, "post", fake_post)
+    assert extract._call("some-model", "PROMPT", b"\x89PNG fake") == (text, 7, 3)
+    assert sent["url"] == url and sent["body"]["model"] == "some-model"
+    content = sent["body"]["messages"][0]["content"]
+    image_block = "image_url" if provider == "openai" else "image"
+    assert {block["type"] for block in content} == {"text", image_block}
+    if provider == "anthropic":
+        assert sent["headers"]["x-api-key"] == "test-key" and "temperature" not in sent["body"]
+    else:
+        assert sent["headers"]["Authorization"] == "Bearer test-key" and sent["body"]["temperature"] == 0
+
+
 def test_truncated_json_triggers_retry(llm):
     replies, calls = llm
     replies.extend([VALID[:40], VALID])

@@ -14,12 +14,13 @@ py -3.11 -m venv .venv
 copy .env.example .env
 ```
 
-Put an OpenRouter key after `LLM_API_KEY=` in `.env`. The file is gitignored and nothing else in the repo holds a key.
+Put an OpenRouter key after `LLM_API_KEY=` in `.env`. The file is gitignored and nothing else in the repo holds a key. `LLM_PROVIDER` is `openai` for any OpenAI-compatible API (OpenRouter included) or `anthropic` for the Anthropic Messages API; `LLM_MODEL` and `LLM_FALLBACK_MODEL` name the two models.
 
 | task | command |
 |---|---|
 | run | `.venv\Scripts\python.exe -m uvicorn app.main:app --port 8000` |
 | run in Docker | `docker compose up --build` |
+| extract one brief, no server | `.venv\Scripts\python.exe -m app.extract "8mm rose quartz stretch bracelet, 18cm"` |
 | test (LLM mocked, no network) | `.venv\Scripts\python.exe -m pytest -q` |
 | generate the eval photos (run once, before any eval) | `.venv\Scripts\python.exe -m eval.make_images` |
 | eval, calls the LLM | `.venv\Scripts\python.exe -m eval.run_eval --runs 3` |
@@ -36,7 +37,7 @@ curl.exe -s -X POST http://127.0.0.1:8000/analyze -F "brief=Looking for a pink r
 
 Add `-F "photo=@path\to\photo.png"` to include a photo. In Windows PowerShell, plain `curl` is an alias for `Invoke-WebRequest` and rejects these flags, so use `curl.exe`.
 
-This is the response for eval case c01, with the real model extraction (13.3s) replayed through the current code and trimmed to the first match:
+This is the response for eval case c01, with the real model extraction (13.3s) replayed through the current code. I trimmed it to 2 of the 7 confidence entries and the first of the 3 matches:
 
 ```json
 {

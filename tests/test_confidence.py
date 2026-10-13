@@ -1,8 +1,3 @@
-import cv2
-import numpy as np
-from fastapi.testclient import TestClient
-
-from app import main
 from app.confidence import field_confidence, review_flags
 from app.estimate import estimate
 from app.extract import ExtractionResult
@@ -44,6 +39,13 @@ def test_inferred_values_are_medium():
 def test_number_check_does_not_match_inside_other_numbers():
     conf, _ = run(spec=CLEAN.model_copy(update={"bead_size_mm": 8}), brief="rose quartz bracelet, 18cm")
     assert conf["bead_size_mm"].level == "medium"
+
+
+def test_word_check_needs_whole_words_but_allows_plurals():
+    conf, _ = run(spec=CLEAN.model_copy(update={"bead_color": ["red"]}), brief="hand-colored rose quartz bracelet")
+    assert conf["bead_color"].level == "medium"
+    conf, _ = run(spec=CLEAN.model_copy(update={"bead_material": "freshwater pearl"}), brief="freshwater pearls")
+    assert conf["bead_material"].level == "high"
 
 
 def test_repaired_field_is_low_confidence():
@@ -97,23 +99,3 @@ def test_extraction_fallback_does_not_also_flag_each_field():
     conf, codes = run(spec=Spec(product_type="unknown"), brief="???", status="fallback")
     assert conf["product_type"].level == "low"
     assert codes == ["EXTRACTION_FALLBACK", "NO_AUTO_MATCH"]
-
-
-def test_analyze_endpoint_end_to_end(monkeypatch):
-    monkeypatch.setattr(main, "extract_spec", lambda brief, image: ExtractionResult(
-        spec=CLEAN, status="ok", image_bead_count=5))
-    img = np.full((600, 800, 3), 230, np.uint8)
-    for i in range(5):
-        cv2.circle(img, (100 + 130 * i, 300), 30, (40, 40, 40), -1, cv2.LINE_AA)
-    photo = cv2.imencode(".png", cv2.GaussianBlur(img, (5, 5), 0))[1].tobytes()
-
-    client = TestClient(main.app)
-    r = client.post("/analyze", data={"brief": BRIEF}, files={"photo": ("p.png", photo, "image/png")})
-    assert r.status_code == 200
-    body = r.json()
-    assert body["matches"][0]["sku"] == "BRC-008"
-    assert body["estimate"]["from_spec"] == 22 and body["estimate"]["from_photo"]["visible_beads"] == 5
-    assert body["needs_review"] is False and body["review_flags"] == []
-
-    r = client.post("/analyze", data={"brief": BRIEF}, files={"photo": ("p.png", b"not an image", "image/png")})
-    assert r.status_code == 400

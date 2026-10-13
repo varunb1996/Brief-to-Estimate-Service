@@ -14,13 +14,8 @@ log = logging.getLogger(__name__)
 
 # USD per 1M tokens (input, output). Models missing here log cost_usd=None.
 PRICES = {
-    "openai/gpt-oss-120b": (0.15, 0.60),
     "dots-studio/dots-3-note-preview:free": (0.0, 0.0),
     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free": (0.0, 0.0),
-    "google/gemma-4-31b-it:free": (0.0, 0.0),
-    "meta-llama/llama-4-scout": (0.18, 0.59),
-    "claude-haiku-5-5": (0.10, 0.50),
-    "claude-sonnet-5-5": (2.00, 10.00),
 }
 DEFAULT_BASE_URL = {"anthropic": "https://api.anthropic.com/v1", "openai": "https://api.openai.com/v1"}
 TIMEOUT_S = 60
@@ -46,13 +41,11 @@ class ExtractionResult(BaseModel):
     repaired_fields: list[str] = []
     image_bead_count: int | None = None
     model: str | None = None
-    tokens_in: int = 0
-    tokens_out: int = 0
     cost_usd: float | None = 0.0  # None when a model that answered has no entry in PRICES
 
 
 def extract_spec(brief: str, image_bytes: bytes | None) -> ExtractionResult:
-    usage = {"tokens_in": 0, "tokens_out": 0, "cost_usd": 0.0}
+    usage = {"cost_usd": 0.0}
     if not brief.strip():
         return _fallback(usage)
 
@@ -108,8 +101,6 @@ def _complete(prompt: str, image: bytes | None, usage: dict) -> tuple[str | None
         cost = (tokens_in * price[0] + tokens_out * price[1]) / 1e6 if price else None
         log.info("llm model=%s latency_ms=%d input_tokens=%d output_tokens=%d cost_usd=%s",
                  model, (time.perf_counter() - start) * 1000, tokens_in, tokens_out, cost)
-        usage["tokens_in"] += tokens_in
-        usage["tokens_out"] += tokens_out
         usage["cost_usd"] = None if cost is None or usage["cost_usd"] is None else usage["cost_usd"] + cost
         return text, model
     return None, None
@@ -185,8 +176,8 @@ def _repair(text: str) -> tuple[dict, list[str]]:
         value = data.get(field)
         if isinstance(value, str) and (m := re.search(r"\d+(?:\.\d+)?", value)):
             number = float(m.group())
-            # "7 inches" must not silently become 7 cm
-            if field == "length_cm" and re.search(r'in|"', value):
+            # "7 inches" must not silently become 7 cm, and "18 cm in length" must not become inches
+            if field == "length_cm" and "cm" not in value and re.search(r'\d\s*(in|inch|inches)\b|\d\s*"', value):
                 number *= 2.54
             data[field] = cast(number)
             fixed.append(field)

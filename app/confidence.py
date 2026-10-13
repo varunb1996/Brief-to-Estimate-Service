@@ -42,9 +42,9 @@ def review_flags(ext: ExtractionResult, confidence: dict[str, FieldConfidence],
         if diff > COUNT_TOLERANCE_BEADS or diff > COUNT_TOLERANCE * max(cv, llm):
             flags.append(_flag("CV_LLM_DISAGREE", f"Photo count is {cv} but the model counted {llm}."))
 
-    if not matches or matches[0].score < MIN_MATCH_SCORE:
-        best = f"best is {matches[0].sku} at {matches[0].score:.2f}" if matches else "catalog is empty"
-        flags.append(_flag("NO_AUTO_MATCH", f"No close catalog match ({best}). Pick a product by hand."))
+    if matches[0].score < MIN_MATCH_SCORE:
+        flags.append(_flag("NO_AUTO_MATCH", f"No close catalog match (best is {matches[0].sku} at "
+                                            f"{matches[0].score:.2f}). Pick a product by hand."))
     return flags
 
 
@@ -80,7 +80,8 @@ def _in_brief(value, brief: str) -> bool:
     if isinstance(value, (int, float)):
         # "8" should match "8mm" but not "18cm"
         return re.search(rf"(?<![\d.]){re.escape(f'{value:g}')}(?!\d)", brief) is not None
-    return str(value).lower() in brief.lower()
+    # Whole words (plural allowed), so a "red" bead isn't "stated" by "hand-colored"
+    return re.search(rf"\b{re.escape(str(value).lower())}s?\b", brief.lower()) is not None
 
 
 def _flag(code: str, message: str, field: str | None = None) -> ReviewFlag:

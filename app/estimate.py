@@ -46,7 +46,7 @@ def from_photo(vision: VisionResult | None) -> PhotoEstimate:
     counts = f"hough={h}, contour={c}"
     if max(h, c) == 0:
         return PhotoEstimate(status="failed", note=f"no beads found ({counts})")
-    if min(h, c) == 0 or vision.agreement < MIN_AGREEMENT:
+    if vision.agreement < MIN_AGREEMENT:  # also catches one method finding nothing (agreement 0)
         return PhotoEstimate(status="failed", mean_diameter_px=vision.mean_diameter_px,
                              note=f"methods disagree ({counts})")
     return PhotoEstimate(status="ok", visible_beads=round((h + c) / 2),

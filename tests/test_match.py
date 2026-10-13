@@ -48,6 +48,8 @@ def test_same_stone_group_gets_half_material_credit():
 @pytest.mark.parametrize("said, expected", [
     ("gold brass", "brass"), ("white freshwater pearls", "freshwater pearl"), ("black onyx", "onyx"),
     ("rose quartz beads", "rose quartz"), ("Rose Quartz", "rose quartz"), ("natural wood", "wood"),
+    ("pink rose quartz", "rose quartz"),  # "rose" is also a color word; it must not be stripped here
+    ("swarovski glass", "glass"), ("lava stone", "lava stone"),
 ])
 def test_material_drops_color_and_bead_words(said, expected):
     assert norm("material", said) == expected

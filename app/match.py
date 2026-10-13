@@ -64,18 +64,14 @@ def norm(kind: str, value: str) -> str:
 
 def _strip_material(value: str) -> str:
     # The model often copies color and "beads" into the material ("gold brass", "white freshwater
-    # pearls"). Try progressively stripped forms and keep the first one the catalog knows.
-    known = {item.bead_material for item in load_catalog()}
-    if value in known:
-        return value
-    no_beads = " ".join(w for w in value.split() if w not in ("bead", "beads"))
-    no_color = " ".join(w for w in no_beads.split() if w not in COLOR_WORDS)
-    candidates = [no_beads, no_color, no_color.removesuffix("s")]
-    for c in candidates:
-        c = SYNONYMS["material"].get(c, c)
-        if c in known:
-            return c
-    return candidates[-1] or value
+    # pearls"). A catalog material inside the value wins; the longest one, so "rose quartz" beats a
+    # stray color word. Otherwise drop color and bead words, which turns "black onyx" into "onyx".
+    known = sorted({item.bead_material for item in load_catalog()}, key=len, reverse=True)
+    for material in known:
+        if material in value:
+            return material
+    stripped = " ".join(w for w in value.split() if w not in COLOR_WORDS | {"bead", "beads"})
+    return SYNONYMS["material"].get(stripped, stripped) or value
 
 
 def _score(spec: Spec, item: CatalogItem) -> Match:
