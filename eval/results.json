@@ -1,0 +1,3554 @@
+{
+  "summary": {
+    "cases": 25,
+    "runs": 3,
+    "fields": {
+      "bead_color": {
+        "n": 19,
+        "accuracy": 0.5789473684210527,
+        "std": 0.0,
+        "stable": 1
+      },
+      "bead_material": {
+        "n": 21,
+        "accuracy": 0.5873015873015873,
+        "std": 0.022447834323382487,
+        "stable": 0.8571428571428571
+      },
+      "bead_shape": {
+        "n": 3,
+        "accuracy": 0.3333333333333333,
+        "std": 0.0,
+        "stable": 1
+      },
+      "bead_size_mm": {
+        "n": 20,
+        "accuracy": 0.7,
+        "std": 0.0,
+        "stable": 1
+      },
+      "clasp_type": {
+        "n": 8,
+        "accuracy": 0.625,
+        "std": 0.0,
+        "stable": 1
+      },
+      "length_cm": {
+        "n": 19,
+        "accuracy": 0.6666666666666666,
+        "std": 0.024810764252159587,
+        "stable": 0.9473684210526315
+      },
+      "product_type": {
+        "n": 24,
+        "accuracy": 0.625,
+        "std": 0.0,
+        "stable": 1
+      },
+      "stated_bead_count": {
+        "n": 1,
+        "accuracy": 1,
+        "std": 0.0,
+        "stable": 1
+      },
+      "string_material": {
+        "n": 15,
+        "accuracy": 0.5333333333333333,
+        "std": 0.0,
+        "stable": 0.9333333333333333
+      }
+    },
+    "matching": {
+      "top1_hit": 0.72,
+      "top3_hit": 0.72
+    },
+    "counts": {
+      "hough": {
+        "n": 6,
+        "of": 6,
+        "mae": 11.666666666666666,
+        "mean_pct_error": 33.33333333333333
+      },
+      "contour": {
+        "n": 6,
+        "of": 6,
+        "mae": 4.666666666666667,
+        "mean_pct_error": 29.417989417989414
+      },
+      "vision-LLM": {
+        "n": 0,
+        "of": 18,
+        "mae": null,
+        "mean_pct_error": null
+      }
+    },
+    "flags": {
+      "flag_rate": 0.56,
+      "precision": 0.7142857142857143,
+      "recall": 0.9090909090909091
+    },
+    "latency_s_total": 898.207,
+    "latency_s_mean": 11.976093333333335,
+    "cost_usd_total": 0.0,
+    "statuses": {
+      "fallback": 30,
+      "ok": 45
+    }
+  },
+  "cases": [
+    {
+      "id": "c01_rose_quartz_stretch",
+      "expected_sku": "BRC-008",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "rose quartz",
+            "bead_size_mm": 8.0,
+            "bead_shape": "round",
+            "bead_color": [
+              "pink"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_shape": true,
+            "bead_color": true,
+            "string_material": false,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-008",
+            "BRC-007",
+            "BRC-006"
+          ],
+          "top_score": 0.85,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 20,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 13334,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "rose quartz",
+            "bead_size_mm": 8.0,
+            "bead_shape": "round",
+            "bead_color": [
+              "pink"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_shape": true,
+            "bead_color": true,
+            "string_material": false,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-008",
+            "BRC-007",
+            "BRC-006"
+          ],
+          "top_score": 0.85,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 20,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 18445,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "rose quartz",
+            "bead_size_mm": 8.0,
+            "bead_shape": "round",
+            "bead_color": [
+              "pink"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_shape": true,
+            "bead_color": true,
+            "string_material": false,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-008",
+            "BRC-007",
+            "BRC-006"
+          ],
+          "top_score": 0.85,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 20,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 20267,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "c02_black_glass_bracelet",
+      "expected_sku": "BRC-001",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "glass",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "black"
+            ],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-004"
+          ],
+          "top_score": 0.95,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 22,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 12384,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "glass",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "black"
+            ],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-004"
+          ],
+          "top_score": 0.95,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 22,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 11777,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "glass",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "black"
+            ],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-004"
+          ],
+          "top_score": 0.95,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 22,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 13864,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "c03_pearl_necklace",
+      "expected_sku": "NCK-001",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "necklace",
+            "bead_material": "freshwater pearl",
+            "bead_size_mm": 6.0,
+            "bead_shape": null,
+            "bead_color": [
+              "white"
+            ],
+            "pattern": null,
+            "string_material": "silk",
+            "length_cm": 45.0,
+            "stated_bead_count": null,
+            "clasp_type": "lobster clasp",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "NCK-001",
+            "NCK-002",
+            "NCK-003"
+          ],
+          "top_score": 1.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 72,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 17881,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "necklace",
+            "bead_material": "freshwater pearl",
+            "bead_size_mm": 6.0,
+            "bead_shape": null,
+            "bead_color": [
+              "white"
+            ],
+            "pattern": null,
+            "string_material": "silk",
+            "length_cm": 45.0,
+            "stated_bead_count": null,
+            "clasp_type": "lobster clasp",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "NCK-001",
+            "NCK-002",
+            "NCK-003"
+          ],
+          "top_score": 1.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 72,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 17000,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "necklace",
+            "bead_material": "freshwater pearl",
+            "bead_size_mm": 6.0,
+            "bead_shape": null,
+            "bead_color": [
+              "white"
+            ],
+            "pattern": null,
+            "string_material": "silk",
+            "length_cm": 45.0,
+            "stated_bead_count": null,
+            "clasp_type": "lobster clasp",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "NCK-001",
+            "NCK-002",
+            "NCK-003"
+          ],
+          "top_score": 1.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 72,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 13210,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "c04_brass_necklace",
+      "expected_sku": "NCK-009",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "necklace",
+            "bead_material": "gold brass",
+            "bead_size_mm": 4.0,
+            "bead_shape": null,
+            "bead_color": [
+              "gold"
+            ],
+            "pattern": null,
+            "string_material": "beading wire",
+            "length_cm": 42.0,
+            "stated_bead_count": null,
+            "clasp_type": "lobster clasp",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": false,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "NCK-009",
+            "NCK-007",
+            "ANK-004"
+          ],
+          "top_score": 0.8,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 101,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 14746,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "necklace",
+            "bead_material": "gold brass",
+            "bead_size_mm": 4.0,
+            "bead_shape": null,
+            "bead_color": [
+              "gold"
+            ],
+            "pattern": null,
+            "string_material": "beading wire",
+            "length_cm": 42.0,
+            "stated_bead_count": null,
+            "clasp_type": "lobster clasp",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": false,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "NCK-009",
+            "NCK-007",
+            "ANK-004"
+          ],
+          "top_score": 0.8,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 101,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 20071,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "necklace",
+            "bead_material": "gold brass",
+            "bead_size_mm": 4.0,
+            "bead_shape": null,
+            "bead_color": [
+              "gold"
+            ],
+            "pattern": null,
+            "string_material": "beading wire",
+            "length_cm": 42.0,
+            "stated_bead_count": null,
+            "clasp_type": "lobster clasp",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": false,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "NCK-009",
+            "NCK-007",
+            "ANK-004"
+          ],
+          "top_score": 0.8,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 101,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 18126,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "c05_amethyst_10mm",
+      "expected_sku": "BRC-010",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "amethyst",
+            "bead_size_mm": 10.0,
+            "bead_shape": null,
+            "bead_color": [
+              "purple"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": false,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-010",
+            "BRC-009",
+            "BRC-012"
+          ],
+          "top_score": 0.85,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 16,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 24552,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "amethyst",
+            "bead_size_mm": 10.0,
+            "bead_shape": null,
+            "bead_color": [
+              "purple"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": false,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-010",
+            "BRC-009",
+            "BRC-012"
+          ],
+          "top_score": 0.85,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 16,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 13644,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "amethyst",
+            "bead_size_mm": 10.0,
+            "bead_shape": null,
+            "bead_color": [
+              "purple"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": false,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-010",
+            "BRC-009",
+            "BRC-012"
+          ],
+          "top_score": 0.85,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 16,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 21820,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "c06_silver_anklet",
+      "expected_sku": "ANK-003",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "anklet",
+            "bead_material": "Sterling silver",
+            "bead_size_mm": 4.0,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 25.0,
+            "stated_bead_count": null,
+            "clasp_type": "lobster clasp",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "ANK-003",
+            "ANK-004",
+            "ANK-001"
+          ],
+          "top_score": 0.75,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 58,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 26213,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "anklet",
+            "bead_material": "Sterling silver",
+            "bead_size_mm": 4.0,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 27.0,
+            "stated_bead_count": null,
+            "clasp_type": "lobster clasp",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "length_cm": false,
+            "clasp_type": true
+          },
+          "top3": [
+            "ANK-003",
+            "ANK-004",
+            "ANK-001"
+          ],
+          "top_score": 0.72,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 63,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 28219,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "anklet",
+            "bead_material": "sterling silver",
+            "bead_size_mm": 4.0,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 25.0,
+            "stated_bead_count": null,
+            "clasp_type": "lobster clasp",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "ANK-003",
+            "ANK-004",
+            "ANK-001"
+          ],
+          "top_score": 0.75,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 58,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 13995,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "c07_pearl_earrings",
+      "expected_sku": "EAR-001",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "earrings",
+            "bead_material": "white freshwater pearls",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "white"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 4.0,
+            "stated_bead_count": null,
+            "clasp_type": "fish hook",
+            "quantity": 2,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": false,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "EAR-001",
+            "EAR-002",
+            "EAR-005"
+          ],
+          "top_score": 0.7,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 6,
+          "flags": [
+            "OUT_OF_RANGE"
+          ],
+          "flagged": true,
+          "latency_ms": 17174,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "earrings",
+            "bead_material": "freshwater pearl",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "white"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 4.0,
+            "stated_bead_count": null,
+            "clasp_type": "fish hook",
+            "quantity": 2,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "EAR-001",
+            "EAR-002",
+            "EAR-005"
+          ],
+          "top_score": 0.9,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 6,
+          "flags": [
+            "OUT_OF_RANGE"
+          ],
+          "flagged": true,
+          "latency_ms": 18330,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "earrings",
+            "bead_material": "freshwater pearl",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "white"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 4.0,
+            "stated_bead_count": null,
+            "clasp_type": "fish hook",
+            "quantity": 2,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "length_cm": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "EAR-001",
+            "EAR-002",
+            "EAR-005"
+          ],
+          "top_score": 0.9,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 6,
+          "flags": [
+            "OUT_OF_RANGE"
+          ],
+          "flagged": true,
+          "latency_ms": 17922,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "c08_tiger_eye",
+      "expected_sku": "BRC-011",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "tiger eye",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "brown"
+            ],
+            "pattern": null,
+            "string_material": "stretch cord",
+            "length_cm": 19.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-011",
+            "BRC-012",
+            "BRC-004"
+          ],
+          "top_score": 0.95,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 23,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 15976,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "tiger eye",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "brown"
+            ],
+            "pattern": null,
+            "string_material": "stretch cord",
+            "length_cm": 19.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-011",
+            "BRC-012",
+            "BRC-004"
+          ],
+          "top_score": 0.95,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 23,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 20581,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "tiger eye",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "brown"
+            ],
+            "pattern": null,
+            "string_material": "stretch cord",
+            "length_cm": 19.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-011",
+            "BRC-012",
+            "BRC-004"
+          ],
+          "top_score": 0.95,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 23,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 10407,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "c09_acrylic_keychain",
+      "expected_sku": "KEY-002",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "keychain",
+            "bead_material": "acrylic",
+            "bead_size_mm": 10.0,
+            "bead_shape": null,
+            "bead_color": [
+              "pink"
+            ],
+            "pattern": null,
+            "string_material": "nylon",
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": "split ring",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "KEY-002",
+            "KEY-003",
+            "KEY-004"
+          ],
+          "top_score": 0.9,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 13657,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "keychain",
+            "bead_material": "acrylic",
+            "bead_size_mm": 10.0,
+            "bead_shape": null,
+            "bead_color": [
+              "pink"
+            ],
+            "pattern": null,
+            "string_material": "nylon",
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": "split ring",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "KEY-002",
+            "KEY-003",
+            "KEY-004"
+          ],
+          "top_score": 0.9,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 17015,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "keychain",
+            "bead_material": "acrylic",
+            "bead_size_mm": 10.0,
+            "bead_shape": null,
+            "bead_color": [
+              "pink"
+            ],
+            "pattern": null,
+            "string_material": "nylon",
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": "split ring",
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "clasp_type": true
+          },
+          "top3": [
+            "KEY-002",
+            "KEY-003",
+            "KEY-004"
+          ],
+          "top_score": 0.9,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 12877,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t01_inches",
+      "expected_sku": "BRC-007",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "rose quartz",
+            "bead_size_mm": 6.0,
+            "bead_shape": null,
+            "bead_color": [
+              "pink"
+            ],
+            "pattern": null,
+            "string_material": "stretch",
+            "length_cm": 17.78,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-007",
+            "BRC-008",
+            "BRC-006"
+          ],
+          "top_score": 0.945,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 29,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 30627,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "rose quartz",
+            "bead_size_mm": 6.0,
+            "bead_shape": null,
+            "bead_color": [
+              "pink"
+            ],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 17.78,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-007",
+            "BRC-008",
+            "BRC-006"
+          ],
+          "top_score": 0.945,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 29,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 38103,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "rose quartz",
+            "bead_size_mm": 6.0,
+            "bead_shape": null,
+            "bead_color": [
+              "pink"
+            ],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 17.78,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-007",
+            "BRC-008",
+            "BRC-006"
+          ],
+          "top_score": 0.945,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 29,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 26309,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t02_wrist_size",
+      "expected_sku": "BRC-009",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "amethyst",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.51,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "string_material": false,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-009",
+            "BRC-010",
+            "BRC-008"
+          ],
+          "top_score": 0.689,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 21,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 27242,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "amethyst",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.51,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "string_material": false,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-009",
+            "BRC-010",
+            "BRC-008"
+          ],
+          "top_score": 0.689,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 21,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 19148,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "amethyst",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.51,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "string_material": false,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-009",
+            "BRC-010",
+            "BRC-008"
+          ],
+          "top_score": 0.689,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 21,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 15155,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t03_no_product_type",
+      "expected_sku": null,
+      "expected_bead_count": null,
+      "should_flag": true,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": "onyx",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "black"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-004"
+          ],
+          "top_score": 0.4,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 20,
+          "flags": [
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 17921,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": "black onyx",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "black"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "bead_material": false,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-004"
+          ],
+          "top_score": 0.4,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 20,
+          "flags": [
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 14347,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": "onyx",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "black"
+            ],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-004"
+          ],
+          "top_score": 0.4,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 20,
+          "flags": [
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 17091,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t04_color_not_stocked",
+      "expected_sku": null,
+      "expected_bead_count": null,
+      "should_flag": true,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "glass",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "yellow"
+            ],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-004"
+          ],
+          "top_score": 0.8,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": 22,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 10453,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "glass",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "yellow"
+            ],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-004"
+          ],
+          "top_score": 0.8,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": 22,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 14881,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "glass",
+            "bead_size_mm": 8.0,
+            "bead_shape": null,
+            "bead_color": [
+              "yellow"
+            ],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 18.0,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "bead_color": true,
+            "string_material": true,
+            "length_cm": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-004"
+          ],
+          "top_score": 0.8,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": 22,
+          "flags": [],
+          "flagged": false,
+          "latency_ms": 16307,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t05_count_contradicts_length",
+      "expected_sku": "BRC-012",
+      "expected_bead_count": null,
+      "should_flag": true,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "tiger eye",
+            "bead_size_mm": 10.0,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 19.0,
+            "stated_bead_count": 30,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "string_material": true,
+            "length_cm": true,
+            "stated_bead_count": true
+          },
+          "top3": [
+            "BRC-012",
+            "BRC-011",
+            "BRC-010"
+          ],
+          "top_score": 0.8,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 19,
+          "flags": [
+            "OUT_OF_RANGE"
+          ],
+          "flagged": true,
+          "latency_ms": 21541,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "tiger eye",
+            "bead_size_mm": 10.0,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 19.0,
+            "stated_bead_count": 30,
+            "clasp_type": null,
+            "quantity": 1,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "string_material": true,
+            "length_cm": true,
+            "stated_bead_count": true
+          },
+          "top3": [
+            "BRC-012",
+            "BRC-011",
+            "BRC-010"
+          ],
+          "top_score": 0.8,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 19,
+          "flags": [
+            "OUT_OF_RANGE"
+          ],
+          "flagged": true,
+          "latency_ms": 34407,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "bracelet",
+            "bead_material": "tiger eye",
+            "bead_size_mm": 10.0,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": "elastic",
+            "length_cm": 19.0,
+            "stated_bead_count": 30,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true,
+            "bead_material": true,
+            "bead_size_mm": true,
+            "string_material": true,
+            "length_cm": true,
+            "stated_bead_count": true
+          },
+          "top3": [
+            "BRC-012",
+            "BRC-011",
+            "BRC-010"
+          ],
+          "top_score": 0.8,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 19,
+          "flags": [
+            "OUT_OF_RANGE"
+          ],
+          "flagged": true,
+          "latency_ms": 19456,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t06_vague",
+      "expected_sku": null,
+      "expected_bead_count": null,
+      "should_flag": true,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": "boho style, medium length"
+          },
+          "fields": {
+            "product_type": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 23962,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": "boho style, medium length"
+          },
+          "fields": {
+            "product_type": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 31644,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "ok",
+          "model": "dots-studio/dots-3-note-preview:free",
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": "boho style, medium length"
+          },
+          "fields": {
+            "product_type": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 26931,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t07_empty",
+      "expected_sku": null,
+      "expected_bead_count": null,
+      "should_flag": true,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 0,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": true
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 0,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t08_oversized_beads",
+      "expected_sku": "KEY-001",
+      "expected_bead_count": null,
+      "should_flag": true,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "string_material": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1394,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "string_material": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1035,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "string_material": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1359,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t09_rope_length",
+      "expected_sku": "NCK-003",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "length_cm": false,
+            "clasp_type": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 956,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "length_cm": false,
+            "clasp_type": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 670,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "length_cm": false,
+            "clasp_type": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 684,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "t10_two_colors",
+      "expected_sku": "ANK-001",
+      "expected_bead_count": null,
+      "should_flag": false,
+      "hough": null,
+      "contour": null,
+      "runs": [
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "length_cm": false,
+            "clasp_type": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 681,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "length_cm": false,
+            "clasp_type": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 707,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "length_cm": false,
+            "clasp_type": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 673,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "i01_pink_strand",
+      "expected_sku": "BRC-008",
+      "expected_bead_count": 18,
+      "should_flag": true,
+      "hough": 18,
+      "contour": 19,
+      "runs": [
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "string_material": false,
+            "length_cm": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": 18,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1480,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "string_material": false,
+            "length_cm": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": 18,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1275,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "string_material": false,
+            "length_cm": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": 18,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1390,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "i02_brown_strand",
+      "expected_sku": "BRC-004",
+      "expected_bead_count": 24,
+      "should_flag": false,
+      "hough": 24,
+      "contour": 24,
+      "runs": [
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "string_material": false,
+            "length_cm": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": 24,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1100,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "string_material": false,
+            "length_cm": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": 24,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1126,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "string_material": false,
+            "length_cm": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": 24,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1074,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "i03_pearls_photo",
+      "expected_sku": "NCK-001",
+      "expected_bead_count": 14,
+      "should_flag": true,
+      "hough": 14,
+      "contour": 37,
+      "runs": [
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "length_cm": false,
+            "clasp_type": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "CV_METHODS_DISAGREE",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1057,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "length_cm": false,
+            "clasp_type": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "CV_METHODS_DISAGREE",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1080,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_size_mm": false,
+            "bead_color": false,
+            "length_cm": false,
+            "clasp_type": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": false,
+          "top3_hit": false,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "CV_METHODS_DISAGREE",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1089,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "i04_black_keychain",
+      "expected_sku": null,
+      "expected_bead_count": 12,
+      "should_flag": true,
+      "hough": 12,
+      "contour": 12,
+      "runs": [
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_color": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 12,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1084,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_color": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 12,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1119,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_material": false,
+            "bead_color": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": 12,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1057,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "i05_red_cubes",
+      "expected_sku": null,
+      "expected_bead_count": 10,
+      "should_flag": true,
+      "hough": 0,
+      "contour": 10,
+      "runs": [
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_shape": false,
+            "bead_color": false,
+            "string_material": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "CV_METHODS_DISAGREE",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1067,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_shape": false,
+            "bead_color": false,
+            "string_material": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "CV_METHODS_DISAGREE",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1059,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_shape": false,
+            "bead_color": false,
+            "string_material": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "CV_METHODS_DISAGREE",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1083,
+          "cost_usd": 0.0
+        }
+      ]
+    },
+    {
+      "id": "i06_seed_bead_anklet",
+      "expected_sku": null,
+      "expected_bead_count": 60,
+      "should_flag": true,
+      "hough": 0,
+      "contour": 56,
+      "runs": [
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_shape": false,
+            "bead_color": false,
+            "length_cm": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "CV_METHODS_DISAGREE",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1166,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_shape": false,
+            "bead_color": false,
+            "length_cm": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "CV_METHODS_DISAGREE",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1147,
+          "cost_usd": 0.0
+        },
+        {
+          "status": "fallback",
+          "model": null,
+          "spec": {
+            "product_type": "unknown",
+            "bead_material": null,
+            "bead_size_mm": null,
+            "bead_shape": null,
+            "bead_color": [],
+            "pattern": null,
+            "string_material": null,
+            "length_cm": null,
+            "stated_bead_count": null,
+            "clasp_type": null,
+            "quantity": null,
+            "extras": [],
+            "notes": null
+          },
+          "fields": {
+            "product_type": false,
+            "bead_shape": false,
+            "bead_color": false,
+            "length_cm": false
+          },
+          "top3": [
+            "BRC-001",
+            "BRC-002",
+            "BRC-003"
+          ],
+          "top_score": 0.0,
+          "top1_hit": true,
+          "top3_hit": true,
+          "llm_count": null,
+          "final_count": null,
+          "flags": [
+            "EXTRACTION_FALLBACK",
+            "CV_METHODS_DISAGREE",
+            "NO_AUTO_MATCH"
+          ],
+          "flagged": true,
+          "latency_ms": 1582,
+          "cost_usd": 0.0
+        }
+      ]
+    }
+  ]
+}

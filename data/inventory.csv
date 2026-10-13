@@ -1,0 +1,41 @@
+sku,product_type,bead_material,bead_size_mm,bead_color,string_material,length_cm,bead_count,clasp_type,unit_price_inr
+BRC-001,bracelet,glass,8,black,elastic,18,22,none,349
+BRC-002,bracelet,glass,8,blue,elastic,18,22,none,349
+BRC-003,bracelet,brass,6,gold,nylon thread,19,29,lobster,549
+BRC-004,bracelet,wood,8,brown,elastic,18,22,none,299
+BRC-005,bracelet,acrylic,6,white,elastic,17,28,none,249
+BRC-006,bracelet,acrylic,8,pink,elastic,16,20,none,249
+BRC-007,bracelet,rose quartz,6,pink,elastic,18,30,none,649
+BRC-008,bracelet,rose quartz,8,pink,elastic,18,22,none,799
+BRC-009,bracelet,amethyst,8,purple,elastic,18,22,none,1049
+BRC-010,bracelet,amethyst,10,purple,elastic,18,18,none,1299
+BRC-011,bracelet,tiger eye,8,brown,elastic,19,23,none,799
+BRC-012,bracelet,tiger eye,10,brown,elastic,19,19,none,999
+BRC-013,bracelet,sterling silver,4,silver,beading wire,17,38,lobster,949
+BRC-014,bracelet,glass,4,turquoise,nylon thread,90,221,lobster,849
+NCK-001,necklace,freshwater pearl,6,white,silk thread,45,72,lobster,2799
+NCK-002,necklace,freshwater pearl,8,white,silk thread,45,54,lobster,3649
+NCK-003,necklace,freshwater pearl,6,white,silk thread,120,200,none,7349
+NCK-004,necklace,glass,10,green,nylon thread,50,48,toggle,799
+NCK-005,necklace,wood,12,beige,cotton cord,60,50,sliding knot,799
+NCK-006,necklace,acrylic,20,orange,nylon thread,50,24,magnetic,799
+NCK-007,necklace,amethyst,6,purple,beading wire,45,72,lobster,1849
+NCK-008,necklace,rose quartz,10,pink,beading wire,50,48,toggle,2299
+NCK-009,necklace,brass,4,gold,beading wire,42,101,lobster,749
+NCK-010,necklace,tiger eye,12,brown,beading wire,55,44,lobster,2899
+EAR-001,earrings,freshwater pearl,8,white,head pin,4,6,fish hook,599
+EAR-002,earrings,freshwater pearl,10,white,head pin,4,4,fish hook,599
+EAR-003,earrings,sterling silver,4,silver,head pin,5,16,fish hook,499
+EAR-004,earrings,brass,6,gold,head pin,5,10,fish hook,299
+EAR-005,earrings,amethyst,8,purple,head pin,4,6,fish hook,449
+EAR-006,earrings,sterling silver,6,silver,head pin,6,14,lever back,799
+ANK-001,anklet,glass,4,white,nylon thread,24,56,lobster,349
+ANK-002,anklet,glass,4,black,nylon thread,24,56,lobster,349
+ANK-003,anklet,sterling silver,4,silver,beading wire,25,58,lobster,1299
+ANK-004,anklet,brass,4,gold,beading wire,25,58,lobster,549
+ANK-005,anklet,wood,6,brown,elastic,25,41,none,349
+KEY-001,keychain,wood,25,beige,leather cord,12,3,split ring,349
+KEY-002,keychain,acrylic,10,pink,nylon thread,12,9,split ring,249
+KEY-003,keychain,acrylic,10,blue,nylon thread,12,9,split ring,249
+KEY-004,keychain,rose quartz,12,pink,nylon thread,12,7,split ring,649
+KEY-005,keychain,tiger eye,10,brown,leather cord,12,9,split ring,599

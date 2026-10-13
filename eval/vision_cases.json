@@ -1,0 +1,117 @@
+[
+  {
+    "id": "01_clean_separated",
+    "image": "images/01_clean_separated.png",
+    "bead_count": 12,
+    "conditions": [
+      "separated"
+    ]
+  },
+  {
+    "id": "02_small_separated",
+    "image": "images/02_small_separated.png",
+    "bead_count": 30,
+    "conditions": [
+      "separated",
+      "small"
+    ]
+  },
+  {
+    "id": "03_strand_spaced",
+    "image": "images/03_strand_spaced.png",
+    "bead_count": 18,
+    "conditions": [
+      "strand",
+      "string"
+    ]
+  },
+  {
+    "id": "04_strand_touching",
+    "image": "images/04_strand_touching.png",
+    "bead_count": 24,
+    "conditions": [
+      "strand",
+      "touching",
+      "string"
+    ]
+  },
+  {
+    "id": "05_overlap",
+    "image": "images/05_overlap.png",
+    "bead_count": 16,
+    "conditions": [
+      "overlap"
+    ]
+  },
+  {
+    "id": "06_glare",
+    "image": "images/06_glare.png",
+    "bead_count": 14,
+    "conditions": [
+      "glare"
+    ]
+  },
+  {
+    "id": "07_mixed_sizes",
+    "image": "images/07_mixed_sizes.png",
+    "bead_count": 24,
+    "conditions": [
+      "mixed sizes"
+    ]
+  },
+  {
+    "id": "08_low_contrast_pearls",
+    "image": "images/08_low_contrast_pearls.png",
+    "bead_count": 14,
+    "conditions": [
+      "low contrast",
+      "glare"
+    ]
+  },
+  {
+    "id": "09_shadows",
+    "image": "images/09_shadows.png",
+    "bead_count": 14,
+    "conditions": [
+      "shadow"
+    ]
+  },
+  {
+    "id": "10_noisy_blurry",
+    "image": "images/10_noisy_blurry.png",
+    "bead_count": 20,
+    "conditions": [
+      "strand",
+      "noise",
+      "blur"
+    ]
+  },
+  {
+    "id": "11_cubes",
+    "image": "images/11_cubes.png",
+    "bead_count": 10,
+    "conditions": [
+      "not round"
+    ]
+  },
+  {
+    "id": "12_dense_pile",
+    "image": "images/12_dense_pile.png",
+    "bead_count": 40,
+    "conditions": [
+      "overlap",
+      "dense",
+      "mixed colors"
+    ]
+  },
+  {
+    "id": "13_seed_beads",
+    "image": "images/13_seed_beads.png",
+    "bead_count": 60,
+    "conditions": [
+      "seed beads",
+      "strand",
+      "touching"
+    ]
+  }
+]

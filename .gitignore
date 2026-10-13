@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+# regenerated from a fixed seed by: python -m eval.make_images
+eval/images/
+data/samples/
+CLAUDE.md
