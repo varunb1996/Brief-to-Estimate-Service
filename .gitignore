@@ -5,4 +5,3 @@ __pycache__/
 # regenerated from a fixed seed by: python -m eval.make_images
 eval/images/
 data/samples/
-CLAUDE.md
